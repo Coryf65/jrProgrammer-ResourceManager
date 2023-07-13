@@ -72,3 +72,5 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 .idea/.idea.jrProgrammer-ResourceManage/.idea/workspace.xml
 .idea/.idea.jrProgrammer-ResourceManage/.idea/projectSettingsUpdater.xml
+.idea/.idea.jrProgrammer-ResourceManage/.idea/indexLayout.xml
+.idea/.idea.jrProgrammer-ResourceManage/.idea/vcs.xml
