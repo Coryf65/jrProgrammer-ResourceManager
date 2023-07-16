@@ -8,7 +8,7 @@ public class ColorPicker : MonoBehaviour
     public Color[] AvailableColors;
     public Button ColorButtonPrefab;
     
-    public Color SelectedColor { get; private set; }
+    public Color SelectedColor { get; set; }
     public System.Action<Color> onColorChanged;
 
     List<Button> m_ColorButtons = new List<Button>();

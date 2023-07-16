@@ -24,13 +24,40 @@ public class MenuUIHandler : MonoBehaviour
         ColorPicker.Init();
         //this will call the NewColorSelected function when the color picker have a color button clicked.
         ColorPicker.onColorChanged += NewColorSelected;
+
+        ColorPicker.SelectedColor(MainManager.Instance.TeamColor);
+
+        ColorPicker.SelectedColor = Color.black;
+    }
+    
+    /// <summary>
+    /// Test code for color picking
+    /// </summary>
+    public void SaveColorClicked()
+    {
+        MainManager.Instance.SaveColor();
     }
 
+    /// <summary>
+    /// Test code for color picking
+    /// </summary>
+    public void LoadColorClicked()
+    {
+        MainManager.Instance.LoadColor();
+        ColorPicker.SelectColor(MainManager.Instance.TeamColor);
+    }
+
+    /// <summary>
+    /// Start a new game loading the main scene
+    /// </summary>
     public void StartNew()
     {
         SceneManager.LoadScene(1);
     }
 
+    /// <summary>
+    /// Quit/Exit the Game in the editor or not
+    /// </summary>
     public void Quit()
     {
 #if UNITY_EDITOR
@@ -38,5 +65,6 @@ public class MenuUIHandler : MonoBehaviour
 #else
         Application.Quit(); // original code to quit Unity player
 #endif
+        MainManager.Instance.SaveColor();
     }
 }
